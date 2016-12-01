@@ -6,3 +6,9 @@ html(lang='en')
   body
     div(class='container')
       h1(class='header')= message
+      p(class='help-block') Submit a file to view its filesize
+      form(action='/get-file-size' method='post' enctype='multipart/form-data')
+        div(class='form-group')
+          label(for='inputFile') File input
+          input(type='file' id='inputFile' name='inputFile')
+        button(type='submit' class='btn btn-default') Submit
